@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="이 앱에 관하여" android:icon="@drawable/ic_baseline_info_24" android:id="@+id/aboutFragment"/>
+    <item android:title="MBTI 검사" android:icon="@drawable/ic_baseline_question_answer_24" android:id="@+id/examineFragment"/>
+    <item android:title="설정" android:icon="@drawable/ic_baseline_settings_24" android:id="@+id/settingsFragment"/>
+</menu>
