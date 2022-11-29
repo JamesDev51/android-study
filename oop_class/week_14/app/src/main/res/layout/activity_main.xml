@@ -18,5 +18,9 @@
                 android:text="Service 생성"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btn_service"/>
+        <Button
+                android:text="worker 시작"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_worker"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

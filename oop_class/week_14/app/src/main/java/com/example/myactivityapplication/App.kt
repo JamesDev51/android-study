@@ -9,6 +9,7 @@ class App:Application() {
 
     companion object{
         const val PROGRESS_CHANNEL_ID  = "com.example.myprogressnotification"
+        const val ALERT_CHANNEL_ID = "com.example.myalertnotification"
     }
 
     override fun onCreate() {
@@ -22,6 +23,14 @@ class App:Application() {
                     NotificationManager.IMPORTANCE_LOW
                 )
                 createNotificationChannel(progressChannel)
+
+                val alertChannel = NotificationChannel(
+                    ALERT_CHANNEL_ID,
+                    "Alerts Tests",
+                    NotificationManager.IMPORTANCE_LOW
+                )
+                createNotificationChannel(alertChannel)
+
             }
         }
     }
