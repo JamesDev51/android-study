@@ -22,5 +22,9 @@
                 android:text="worker 시작"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btn_worker"/>
+        <Button
+                android:text="알람 설정"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_alarm"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

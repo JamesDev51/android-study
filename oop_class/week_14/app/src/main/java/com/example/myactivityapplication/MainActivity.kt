@@ -1,7 +1,10 @@
 package com.example.myactivityapplication
 
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.content.Intent
 import android.os.Bundle
+import android.os.SystemClock
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.work.NetworkType
@@ -42,6 +45,22 @@ class MainActivity : AppCompatActivity() {
 
             WorkManager.getInstance(applicationContext).enqueue(workRequest)
 
+        }
+
+        binding.btnAlarm.setOnClickListener {
+            val intent = Intent(this, AlarmReceiver::class.java)
+
+            intent.putExtra("message","Exact Alarm Triggered")
+
+            val pendingIntent = PendingIntent.getBroadcast(
+                this, 0, intent, PendingIntent.FLAG_IMMUTABLE
+            )
+
+            getSystemService(AlarmManager::class.java).setExact(
+                AlarmManager.RTC_WAKEUP,
+                SystemClock.elapsedRealtime() + 10 * 1000,
+                pendingIntent
+            )
         }
 
     }
