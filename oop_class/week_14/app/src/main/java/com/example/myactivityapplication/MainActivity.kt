@@ -3,6 +3,7 @@ package com.example.myactivityapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.example.myactivityapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,5 +20,13 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
+
+        binding.btnService.setOnClickListener {
+            val intent = Intent(this, ProgressService::class.java)
+
+//            startService(intent)
+            ContextCompat.startForegroundService(this,intent)
+        }
+
     }
 }

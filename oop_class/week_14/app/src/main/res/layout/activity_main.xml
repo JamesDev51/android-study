@@ -14,5 +14,9 @@
                 android:text="CREATE 2nd Activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/btn_second_activity"/>
+        <Button
+                android:text="Service 생성"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_service"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
